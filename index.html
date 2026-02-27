@@ -1,1 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>eBookify | Professional eBooks Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<!-- NAVBAR -->
+<nav class="navbar">
+    <h2 class="logo">📘 eBookify</h2>
+    <input type="text" id="search" placeholder="Search eBooks..." onkeyup="searchBooks()">
+    <button class="login-btn" onclick="openLogin()">Login</button>
+</nav>
+
+<!-- CATEGORIES -->
+<div class="categories">
+    <button onclick="filterBooks('all')">All</button>
+    <button onclick="filterBooks('programming')">Programming</button>
+    <button onclick="filterBooks('ai')">AI</button>
+    <button onclick="filterBooks('web')">Web</button>
+</div>
+
+<!-- BOOKS -->
+<section class="books" id="bookList">
+    <div class="book programming">
+        <img src="images/cpp.jpg">
+        <h3>Master C++</h3>
+        <p>Programming</p>
+        <a href="#">Download</a>
+    </div>
+
+    <div class="book ai">
+        <img src="images/ai.jpg">
+        <h3>AI Basics</h3>
+        <p>Artificial Intelligence</p>
+        <a href="#">Download</a>
+    </div>
+
+    <div class="book web">
+        <img src="images/web.jpg">
+        <h3>Web Development</h3>
+        <p>Web</p>
+        <a href="#">Download</a>
+    </div>
+</section>
+
+<!-- LOGIN MODAL -->
+<div class="modal" id="loginModal">
+    <div class="modal-content">
+        <span onclick="closeLogin()" class="close">&times;</span>
+        <h2>Login</h2>
+        <input type="text" placeholder="Username" id="username">
+        <input type="password" placeholder="Password" id="password">
+        <button onclick="login()">Login</button>
+        <p id="loginMsg"></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
